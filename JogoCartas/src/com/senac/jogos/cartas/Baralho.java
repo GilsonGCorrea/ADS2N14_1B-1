@@ -34,7 +34,7 @@ public class Baralho {
 		
 		cartas[carta] = cartas[numCartas]; 
 		
-		return cartas[carta];
+		return sorteada;
 	}
 	
 	public static void main(String[] args)
