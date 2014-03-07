@@ -12,26 +12,25 @@ public class JogoView {
 	
 	public static void main(String[] args)
 	{
-		out.println("Digite 'jogar' para jogar, 'pular' para passar a vez:");
-		
 		out.println(
 				"Carta na mesa: " + controller.showMesa()
 		);
 
-		out.println(
-				"Carta do jogador: " + controller.showCartaJogador()
-		);
+		out.print("Digite 'jogar' para jogar, 'pular' para passar a vez: ");
 		
 		String comando = teclado.next();
-		if (comando.equalsIgnoreCase("JOGAR"))
+		if (comando.equalsIgnoreCase("JOGAR")) {
+			out.println(
+					"Carta do jogador: " + controller.showCartaJogador()
+			);
 			controller.playTurno();
-		// else pula o turno
+		}
+		// else pula o turno		
 		
 		out.println(
 				"Pontos do Jogador: " +
 				controller.showJogador()
 		);
 	}
-	
 	
 }
